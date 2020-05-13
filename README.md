@@ -42,4 +42,21 @@ Currently MPI support is missing.
 This package is CI tested against FEniCS packages for `ubuntu 16.04 LTS` [![Build Status](https://travis-ci.org/MiroK/fenics-calc.svg?branch=master)](https://travis-ci.org/MiroK/fenics-calc)
 
 ## Dependencies and installation
-In addition to FEniCS stack `h5py` is needed if one wants to use `XDMFTempSeries`. After that, `python setup.py install --user` (or variants) is how to install this module. 
+In addition to FEniCS stack `h5py` is needed if one wants to use
+`XDMFTempSeries`. After that, `python setup.py install --user` (or variants) is
+how to install this module. 
+
+## Notes
+1. This code is only compatible with fenics 2017.1.0 (maybe 2017.2.0 is OK, not
+  sure)
+  - `docker pull quay.io/fenicsproject/stable:2017.1.0`
+2. Using `pip install --no-binary=h5py h5py` to install `h5py`. Otherwise it will
+  fail.
+3. For `DMD` analysis, do as following: 
+  - `pip install numpy scipy matplotlib future sphinx nose`
+  - `apt-get update`
+  - `apt-get install python-tk`
+    Then follow the instruction
+    [here](https://github.com/mathLab/PyDMD#dependencies-and-installation).
+
+**Note**: do step 2 and 3 in root mode.
