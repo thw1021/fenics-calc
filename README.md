@@ -50,6 +50,11 @@ how to install this module.
 1. This code is only compatible with fenics 2017.1.0 (maybe 2017.2.0 is OK, not
   sure)
   - `docker pull quay.io/fenicsproject/stable:2017.1.0`
+  - `docker run -ti -v $(pwd):/home/fenics/shared --name fenics_postprocess quay.io/fenicsproject/stable:2017.1.0`
+  - `exit`
+  - `docker start fenics_postprocess`
+  - `docker exec -ti fenics_postprocess /bin/bash -l` (go into root mode to install packages)
+  - `cd local/`
 2. Using `pip install --no-binary=h5py h5py` to install `h5py`. Otherwise it will
   fail.
 3. For `DMD` analysis, do as following: 
