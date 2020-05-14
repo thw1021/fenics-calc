@@ -65,4 +65,4 @@ how to install this module.
     Then follow the instruction
     [here](https://github.com/mathLab/PyDMD#dependencies-and-installation).
 
-**Note**: do step 2 and 3 in root mode.
+**Note**: do step 2 and 3 in root mode. Possible problems see [here](https://github.com/thw1021/fenics-calc/issues/1#issue-618204196).
